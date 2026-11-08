@@ -14,3 +14,11 @@ def test_count_images(tmp_path):
     (tmp_path / "notes.txt").touch()
 
     assert count_images(tmp_path) == 2
+
+
+import pytest
+
+def test_count_images_invalid_directory(tmp_path):
+    with pytest.raises(FileNotFoundError):
+        count_images(tmp_path / "nonexistent")
+      
