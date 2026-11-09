@@ -1,14 +1,19 @@
-MMA3001 Data Loader Test Report
-Testing framework: pytest
-Python version 3.13.18
+MMA3001 Project Test Report
+
+**Testing framework:** pytest 8.4.2  
+**Python version:** 3.13.16
 
 Tests performed:
-1. test_get_dataset_paths: PASSED
-2. test_count_images: PASSED
-3. test_count_images_invalid_directory: PASSED
 
-Total tests: 3
-Passed: 3
-Failed: 0
+1. `test_get_dataset_paths`: PASSED
+2. `test_count_images`: PASSED
+3. `test_count_images_invalid_directory`: PASSED
+4. `test_evaluate_model_uses_validation_split`: PASSED
+5. `test_evaluate_model_rejects_invalid_split`: PASSED
+6. `test_load_model`: PASSED
 
-Execution time: 0.03 seconds
+**Total tests:** 6  
+**Passed:** 6  
+**Failed:** 0
+
+**Execution time:** 7.76 seconds
