@@ -3,7 +3,7 @@ from ultralytics import YOLO
 
 def train_model(data_config, model_weights, output_dir,
                 image_size=640, batch_size=16, epochs=50, device=0):
-   """
+    """
     Train a YOLO object detection model.
 
     Args:
