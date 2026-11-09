@@ -135,7 +135,43 @@ Consequently, YOLOv8s at 640px is provisionally selected for final evaluation on
 
 *Note: All results are from the validation dataset. The final test-set evaluation has not yet been performed.*
 
-## 6. Discussion
-Packaging error detection remains a significant weakness despite this error class representing the largest proportion of dataset annotations.
 
-The final model selection will consider both detection accuracy and computiational cost
+## 6. Final Test-Set Evaluation
+
+The YOLOv8s model at 640px was selected for final evaluation based on its validation performance.
+
+The model was evaluated using the previously untouched test split containing 80 images and 79 annotated defect instances.
+
+### Overall Results
+
+| Metric | Test result |
+|---|---:|
+| Precision | 0.851 |
+| Recall | 0.437 |
+| mAP50 | 0.570 |
+| mAP50–95 | 0.246 |
+| Inference time | 8.3 ms/image |
+
+### Per-Class Results
+
+| Defect | Precision | Recall | mAP50 | mAP50–95 |
+|---|---:|---:|---:|---:|
+| Loose-meat | 0.774 | 0.333 | 0.720 | 0.244 |
+| Packaging-error | 0.773 | 0.565 | 0.572 | 0.132 |
+| Twisted-meat | 1.000 | 0.000 | 0.122 | 0.0367 |
+| Unsealed | 0.856 | 0.851 | 0.865 | 0.573 |
+
+The wrinkle category could not be evaluated because no annotated examples were present in the test dataset.
+
+### Discussion
+
+The final evaluation demonstrates that the selected model achieves relatively high precision but considerably lower recall.
+
+Packaging-error detection achieved an mAP50 of 0.572, indicating reasonable detection capability, although localisation accuracy remains limited.
+
+Twisted-meat detection performed poorly, with zero recall at the reported operating point. This result should be interpreted cautiously because only four instances were present in the test dataset.
+
+Overall, the results demonstrate that the model can identify several categories of packaging defects, but its inconsistent recall and per-class performance limit its suitability for an automated inspection system without further improvement.
+
+The test results also highlight the importance of evaluating individual defect categories rather than relying exclusively on aggregate performance metrics.
+
