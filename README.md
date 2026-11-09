@@ -63,7 +63,7 @@ MMA3001-Pork-Inspection/
 
 ├── LICENSE
 
-└── experiment_log.md
+└── experimental_log.md
 
 * src/: contains the python functions for dataset handling, model loading, training and evaluation
 * tests/: contains automated tests and the test report
