@@ -1,22 +1,22 @@
 import argparse
-from pathlib import Path
 from ultralytics import YOLO
 
 def train_model(data_config, model_weights, output_dir,
                 image_size=640, batch_size=16, epochs=50, device=0):
-    """
+   """
     Train a YOLO object detection model.
 
-    Parameters:
-        data_config: Path to the dataset configuration YAML.
-        model_weights: Path to the initial model weights.
-        output_dir: Directory for saving training results.
-        image_size: Input image resolution.
-        batch_size: Number of images per training batch.
-        epochs: Maximum number of training epochs.
+    Args:
+        data_config (str or Path): Path to the dataset YAML configuration.
+        model_weights (str or Path): Path to the initial model weights.
+        output_dir (str or Path): Directory for saving training results.
+        image_size (int): Input image resolution in pixels.
+        batch_size (int): Number of images per training batch.
+        epochs (int): Maximum number of training epochs.
+        device (int or str): Computing device used for training.
 
     Returns:
-        Training results from Ultralytics.
+        Results: Training results returned by Ultralytics.
     """
 
     model = YOLO(model_weights)
@@ -64,6 +64,6 @@ if __name__ == "__main__":
         output_dir=args.output,
         image_size=args.imgsz,
         batch_size=args.batch,
-        epochs=args.epochs
+        epochs=args.epochs,
         device=args.device
     )
