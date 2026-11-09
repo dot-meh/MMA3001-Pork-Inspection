@@ -3,7 +3,7 @@ from pathlib import Path
 from ultralytics import YOLO
 
 def train_model(data_config, model_weights, output_dir,
-                image_size=640, batch_size=16, epochs=50):
+                image_size=640, batch_size=16, epochs=50, device=0):
     """
     Train a YOLO object detection model.
 
@@ -28,7 +28,7 @@ def train_model(data_config, model_weights, output_dir,
         epochs=epochs,
         patience=10,
         seed=42,
-        device=0,
+        device=device,
         project=str(output_dir),
         name="training_run",
         plots=True
@@ -49,7 +49,8 @@ def parse_arguments():
     parser.add_argument("--imgsz", type=int, default=640)
     parser.add_argument("--batch", type=int, default=16)
     parser.add_argument("--epochs", type=int, default=50)
-
+    parser.add_argument("--device", default="0")
+  
     return parser.parse_args()
 
 
@@ -64,4 +65,5 @@ if __name__ == "__main__":
         image_size=args.imgsz,
         batch_size=args.batch,
         epochs=args.epochs
+        device=args.device
     )
