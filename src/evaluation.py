@@ -1,24 +1,27 @@
 def evaluate_model(model, data_config, split="val", imgsz=640):
-  """
-  Evaluate a YOLO model on a specified data split
-  
-  Parameters:
-    model: Loaded YOLO model
-    data_config: Path to the dataset YAML configuration
-    split: Dataset split to evaluate
-    imgsz: Image size used for evaluation
+    """
+    Evaluate a YOLO model on a specified dataset split.
 
-  Reurns:
-    Evaluation results from Ultralytics
-  """
+    Args:
+        model: Loaded Ultralytics YOLO model.
+        data_config (str or Path): Path to the dataset YAML configuration.
+        split (str): Dataset split to evaluate ('val' or 'test').
+        imgsz (int): Image resolution used during evaluation.
 
-  if split not in ["val", "test"]:
-    raise ValueError("split must be either 'val' or 'test'")
-  
-  results = model.val(
-    data=str(data_config),
-    split=split,
-    imgsz=imgsz
-  )
+    Returns:
+        Results: Evaluation results returned by Ultralytics.
 
-  return results
+    Raises:
+        ValueError: If split is not 'val' or 'test'.
+    """
+
+    if split not in ["val", "test"]:
+        raise ValueError("split must be either 'val' or 'test'")
+
+    results = model.val(
+        data=str(data_config),
+        split=split,
+        imgsz=imgsz
+    )
+
+    return results
