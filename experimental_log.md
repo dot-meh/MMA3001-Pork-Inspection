@@ -113,7 +113,7 @@ The following table compares the validation performance of the four experimental
 | YOLOv8n | 640px | 0.650 | 0.617 | 0.623 | 0.348 | 4.4 |
 | YOLOv8s | 640px | **0.781** | 0.619 | **0.681** | **0.424** | 7.9 |
 | YOLOv8s | 960px | 0.700 | **0.681** | 0.650 | 0.329 | 19.6 |
-| YOLOv8s | 1280px | 0.551 | 0.552 | 0.544 | 0.296 | 14.3 |
+| YOLOv8s | 1280px | 0.568 | 0.557 | 0.546 | 0.294 | 14.3 |
 
 ### 5.1 Key Findings
 
