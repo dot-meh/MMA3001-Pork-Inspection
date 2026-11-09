@@ -1,9 +1,17 @@
-
 from pathlib import Path
 
 
 def get_dataset_paths(dataset_dir):
-    """Return paths to the train, valid and test folders."""
+    """
+    Construct paths to the training, validation and test directories.
+
+    Args:
+        dataset_dir (str or Path): Path to the main dataset directory.
+
+    Returns:
+        dict: Dictionary containing Path objects for the train, valid
+        and test directories.
+    """
 
     dataset_dir = Path(dataset_dir)
 
@@ -19,7 +27,20 @@ def get_dataset_paths(dataset_dir):
 
 
 def count_images(image_dir):
-    """Count image files in a directory."""
+    """
+    Count supported image files in a directory.
+
+    Supported formats are JPG, JPEG and PNG.
+
+    Args:
+        image_dir (str or Path): Path to the image directory.
+
+    Returns:
+        int: Number of supported image files found.
+
+    Raises:
+        FileNotFoundError: If the specified directory does not exist.
+    """
 
     image_dir = Path(image_dir)
 
@@ -35,4 +56,3 @@ def count_images(image_dir):
             count += 1
 
     return count
-
