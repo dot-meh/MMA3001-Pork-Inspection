@@ -1,7 +1,7 @@
 # Experimental Log - Pork Rasher Defect Detection
 
 ## 1. Project Objective
-The project uses YOLO based object detection to automate visual inspection of package pork rashers.
+The project uses YOLO based object detection to automate visual inspection of packaged pork rashers.
 The objective is to identify, classify and localize five possible defect classes.
 
 - Loose meat
@@ -15,13 +15,13 @@ Source - RoboFlow - Pork Rasher Error Packaging, Version 4
 Dataset Split
 - Training: 3349 Images
 - Validation: 120 Images
-- Training: 80 Images
+- Testing: 80 Images
 - Total: 3549 Images
 
 Identified Limitations in Dataset
-1. Small validation and training sets
+1. Small validation and testing sets
 2. Some related source images occur across different dataset splits
-3. No wrinkle examples appear in the training or validation sets
+3. No wrinkle examples appear in the testing or validation sets
 4. Some images contain empty annotations
 
 ## 3. Experimental Setup
@@ -85,21 +85,21 @@ mAP50-95: 0.329
 Inference Time: 19.6 ms/image
 
 ### 4.4 YOLOv8s - 1280px
-Purpose: Investigate further increase in image resolution improves small defect detection (specifically packagine errors)
+Purpose: Investigate further increase in image resolution improves small defect detection (specifically packaging errors)
 
 Parameters
 Batch size: 4
 Image Resolution: 1280x1280
 
 Metrics/Results
-Precision: 0.551
-Recall: 0.552
-mAP50: 0.544
-mAP50-95: 0.296
-Inference Time: 14.3 ms
+Precision: 0.568
+Recall: 0.557
+mAP50: 0.546
+mAP50-95: 0.294
+Inference Time: 44.8 ms
 
 Observations
-1280px did not improve detection performance compared with 680px or 960px experiments.
+1280px did not improve detection performance compared with 640px or 960px experiments.
 The higher resolution model although selected to improve small-defect detection, lower performance was observed for this specific error class.
 Packaging error detection remained weak (mAP50) = 0.208.
 This result suggests increasing resolution is insufficient to improve small error detection
