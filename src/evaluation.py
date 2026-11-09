@@ -12,6 +12,9 @@ def evaluate_model(model, data_config, split="val", imgsz=640):
     Evaluation results from Ultralytics
   """
 
+  if split not in ["val", "test"]:
+    raise ValueError("split must be either 'val' or 'test'")
+  
   results = model.val(
     data=str(data_config),
     split=split,
