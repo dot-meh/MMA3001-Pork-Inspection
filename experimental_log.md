@@ -175,3 +175,18 @@ Overall, the results demonstrate that the model can identify several categories 
 
 The test results also highlight the importance of evaluating individual defect categories rather than relying exclusively on aggregate performance metrics.
 
+## 7. Visual Error Analysis
+A Visual comparison was performed between model predictions and test-set annotated images for six samples.
+
+### Observations
+- Unsealed defects were consistently identified in the inspected examples
+- Packaging error detection remains inconsistent, with one of the two inspected examples missed entirely
+- Bounding boxes predicted sometimes slightly differed from test-set bounding boxes.
+- The model demonstrated strong performance in visual detection of unsealed defects, and poor performance in visually detecting packaging errors.
+
+### Engineering Implications
+The visual inspection supports the quantitative performance evaluation, identifying differing model performance between different defect classes.
+
+Further improvements should be focused towards reducing missed detections, and improving bounding-box localization, particularly for packaging error defects.
+
+This selective assessment is not illustrative of model performance over the entire dataset.
