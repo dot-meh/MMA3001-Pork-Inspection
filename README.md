@@ -109,9 +109,26 @@ pip install -r requirements.txt
 
 Download Version 4 of the Pork Rasher Error(Packaging) dataset from Roboflow universe.
 
-Extract the dataset and ensure that its directory structure contains the train, valid and test folders, along with the dataset configuration YAML file.
+Extract the dataset and ensure that the directory structure follows this format:
+
+```text
+dataset/
+├── train/
+│   ├── images/
+│   └── labels/
+├── valid/
+│   ├── images/
+│   └── labels/
+├── test/
+│   ├── images/
+│   └── labels/
+└── data.yaml
+```
+
+The `data.yaml` file contains the dataset paths, class names and number of classes. Ensure that its paths correctly reference the extracted dataset directories before running the training command.
 
 The dataset is not included in the repository.
+
 
 ### Running the Code
 The python modules provide functions for dataset handling, model loading, training and evaluation.
