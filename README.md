@@ -53,6 +53,24 @@ MMA3001-Pork-Inspection/
 
 │
 
+├── docs/
+
+│   ├── index.html
+
+│   ├── src.html
+
+│   ├── search.js
+
+│   └── src/
+
+│       ├── data_loader.html
+
+│       ├── evaluation.html
+
+│       ├── model.html
+
+│       └── train.html
+
 │
 ├── requirements.txt
 
@@ -69,7 +87,7 @@ MMA3001-Pork-Inspection/
 * LICENSE: Defines license for project source code
 
 ## 4. Code Documentation
-HTML documentation for the project's Python source modules is available in the docs directory.
+HTML documentation for the project's Python source modules is available in the [here] (docs/index.html).
 
 ## 5. Installation and Usage
 ### Requirements
