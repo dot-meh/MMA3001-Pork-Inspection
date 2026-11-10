@@ -7,16 +7,16 @@ The aim of this project is to develop an object detection system capable of iden
 The intended engineering application is automated visual quality inspection in food packaging processes. This project is a computational investigation using an existing image dataset and does not constitute validation of an employed system.
 
 ## 2. Dataset and Methodology
-This project uses Version 4 of the Pork Rasher Error(Packaging) Computer Vision Dataset obtained from Roboflow. The dataset contains 3549 annotated images divided into training (3349), validation (120) and test (80) splits. Images are provided in a RGB format with YOLO Format annotated bounding boxes.
+This project uses Version 4 of the Pork Rasher Error(Packaging) Computer Vision Dataset obtained from Roboflow. The dataset contains 3,549 annotated images divided into training (3349), validation (120) and test (80) splits. Images are provided in an RGB format with YOLO Format annotated bounding boxes.
 
 Five defect categories are present in the dataset
 - Loose Meat
 - Packaging-Error
 - Twisted Meat
-- Wrinkled Meat
+- Wrinkle
 - Unsealed Meat
 
-This Project used the YOLOv8 object detection framework. Experiments compare YOLOv8n and YOLOv8s model configurations at input resolutions of 640, 960 and 1240 pixels. Model performance is assessed using precision, recall mean average precision (mAP) and inference time.
+This Project used the YOLOv8 object detection framework. Experiments compare YOLOv8n and YOLOv8s model configurations at input resolutions of 640, 960 and 1280 pixels. Model performance is assessed using precision, recall mean average precision (mAP) and inference time.
 
 Original dataset splits were retained for model development and evaluation.
 
@@ -69,10 +69,13 @@ MMA3001-Pork-Inspection/
 * tests/: contains automated tests and the test report
 * notebooks/: reserved for project notebooks and experimental work.
 * requirements.txt: Lists the python dependencies.
-* experiment_log.md: Records model experiments, comparisons and results.
+* experimental_log.md: Records model experiments, comparisons and results.
 * LICENSE: Defines license for project source code
 
-## 4. Installation and Useage
+## 4. Code Documentation
+HTML documentation for the project's Python source modules is available in the docs directory.
+
+## 5. Installation and Usage
 ### Requirements
 The project uses python and the Ultralytics YOLOv8 framework. Required python packages are listed in requirements.txt.
 
@@ -108,7 +111,7 @@ Automated tests can be run using:
 
 python -m pytest -v
 
-## 5. Results and Limitations
+## 6. Results and Limitations
 ### Results
 Four YOLO configurations were compared using the validation dataset. YOLOv8s at 640 pixel input resolution achieved the best overall performance.
 
@@ -128,7 +131,7 @@ The relatively small validation and test sets limit statistical confidence of th
 
 The project investigates image based detection, not an implemented industrial inspection system. Consequently, the results do not establish performance under real production line conditions.
 
-## 6. References and Attribution
+## 7. References and Attribution
 ### Dataset
 Pork Rasher Error(Packaging), Version 4, Roboflow Universe.
 
