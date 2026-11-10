@@ -7,7 +7,7 @@ The aim of this project is to develop an object detection system capable of iden
 The intended engineering application is automated visual quality inspection in food packaging processes. This project is a computational investigation using an existing image dataset and does not constitute validation of an employed system.
 
 ## 2. Dataset and Methodology
-This project uses Version 4 of the Pork Rasher Error(Packaging) Computer Vision Dataset obtained from Roboflow. The dataset contains 3,549 annotated images divided into training (3349), validation (120) and test (80) splits. Images are provided in an RGB format with YOLO Format annotated bounding boxes.
+This project uses Version 4 of the Pork Rasher Error(Packaging) Computer Vision Dataset obtained from Roboflow. The dataset contains 3,549 images divided into training (3349), validation (120) and test (80) splits. Images are provided in an RGB format with YOLO Format annotated bounding boxes.
 
 Five defect categories are present in the dataset
 - Loose Meat
