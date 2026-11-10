@@ -16,7 +16,7 @@ Five defect categories are present in the dataset
 - Wrinkle
 - Unsealed Meat
 
-This Project used the YOLOv8 object detection framework. Experiments compare YOLOv8n and YOLOv8s model configurations at input resolutions of 640, 960 and 1280 pixels. Model performance is assessed using precision, recall mean average precision (mAP) and inference time.
+This Project used the YOLOv8 object detection framework. Four configurations were evaluated: YOLOv8n at 640 × 640 pixels, and YOLOv8s at 640 × 640, 960 × 960 and 1280 × 1280 pixels. Model performance is assessed using precision, recall mean average precision (mAP) and inference time.
 
 Original dataset splits were retained for model development and evaluation.
 
@@ -88,7 +88,7 @@ MMA3001-Pork-Inspection/
 * LICENSE: Defines license for project source code
 
 ## 4. Code Documentation
-HTML documentation for the project's Python source modules is available in the [here] (docs/index.html).
+HTML documentation for the project's Python source modules is provided in the docs/ directory.
 
 ## 5. Installation and Usage
 ### Requirements
