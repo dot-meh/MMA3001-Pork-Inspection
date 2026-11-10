@@ -133,8 +133,6 @@ The 1280px experiment also failed to improve aggregate detection performance.
 
 Consequently, YOLOv8s at 640px is provisionally selected for final evaluation on the held-out test dataset.
 
-*Note: All results are from the validation dataset. The final test-set evaluation has not yet been performed.*
-
 
 ## 6. Final Test-Set Evaluation
 
