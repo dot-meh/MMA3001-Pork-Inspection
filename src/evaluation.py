@@ -21,7 +21,9 @@ def evaluate_model(model, data_config, split="val", imgsz=640):
     results = model.val(
         data=str(data_config),
         split=split,
-        imgsz=imgsz
+        imgsz=imgsz,
+        conf = 0.001,
+        iou = 0.6
     )
 
     return results
