@@ -52,9 +52,6 @@ MMA3001-Pork-Inspection/
 │   └── test_report.txt
 
 │
-├── notebooks/
-
-│   └── README.md
 
 │
 ├── requirements.txt
@@ -67,7 +64,6 @@ MMA3001-Pork-Inspection/
 
 * src/: contains the python functions for dataset handling, model loading, training and evaluation
 * tests/: contains automated tests and the test report
-* notebooks/: reserved for project notebooks and experimental work.
 * requirements.txt: Lists the python dependencies.
 * experimental_log.md: Records model experiments, comparisons and results.
 * LICENSE: Defines license for project source code
