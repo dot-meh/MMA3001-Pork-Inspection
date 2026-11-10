@@ -1,19 +1,17 @@
-MMA3001 Project Test Report
 
-**Testing framework:** pytest 8.4.2  
-**Python version:** 3.13.16
+============================= test session starts ==============================
+platform linux -- Python 3.13.18, pytest-8.4.2, pluggy-1.7.0
+rootdir: /kaggle/working/MMA3001-Pork-Inspection
+plugins: anyio-4.15.1
+collected 7 items
 
-Tests performed:
+tests/test_data_loader.py::test_get_dataset_paths PASSED
+tests/test_data_loader.py::test_count_images PASSED
+tests/test_data_loader.py::test_count_images_invalid_directory PASSED
+tests/test_evaluation.py::test_evaluate_model_uses_validation_split PASSED
+tests/test_evaluation.py::test_evaluate_model_uses_test_split PASSED
+tests/test_evaluation.py::test_evaluate_model_rejects_invalid_split PASSED
+tests/test_model.py::test_load_model PASSED
 
-1. `test_get_dataset_paths`: PASSED
-2. `test_count_images`: PASSED
-3. `test_count_images_invalid_directory`: PASSED
-4. `test_evaluate_model_uses_validation_split`: PASSED
-5. `test_evaluate_model_rejects_invalid_split`: PASSED
-6. `test_load_model`: PASSED
+============================== 7 passed in 1.77s ===============================
 
-**Total tests:** 6  
-**Passed:** 6  
-**Failed:** 0
-
-**Execution time:** 7.76 seconds
